@@ -5,6 +5,7 @@ function calcular() {
 
     document.getElementById('resultado').innerHTML = `O dobro do número ${num} é ${num*2} e a dele é ${num/2}`
 
+    
 
 }
 
