@@ -1,6 +1,5 @@
-function verificar(){
-
-     let resultado = document.getElementById('resultado')
+function verificar(event){
+    event.preventDefault();
 
     let nascimento = document.getElementById('nascimento').value; // menor de idade não pode doar sangue
 
@@ -12,46 +11,26 @@ function verificar(){
 
     let medicineSelecionada = document.querySelector('input[name="medicine"]:checked').value; // não pode se tiver
 
-    // console.log(nascimento)
-     console.log(typeof nascimento)
-     let dataNascimento = new Date(nascimento)
-    // console.log(dataNascimento)
-    // console.log(typeof dataNascimento)
+    console.log(nascimento)
+    console.log(typeof nascimento)
+    let dataNascimento = new Date(nascimento)
+    console.log(dataNascimento)
+    console.log(typeof dataNascimento)
 
-     let hoje = new Date()
-     let idade = hoje.getFullYear() - dataNascimento.getFullYear();
-    //  console.log(idade)
-     let dia = dataNascimento.getDay();
-     let mes = dataNascimento.getMonth();
-
-    // let resposta = nascimento
-
-    // if (nascimento < 18, doencaSelecionada = inputYesSick, peso < 50, tattooSelecionada = inputYesSick, medicineSelecionada = inputYesSick){
-    //     resposta = 'Pode'
-    // } else {
-    //     resposta = 'Não pode'
-    // }
-
-    // let respostap = peso 
-
-    // if (peso > 50){
-    //     respostap = 'pode doar sangue'
-    // } else {
-    //     respostap = 'não pode doar sangue'
-    // }
+    let hoje = new Date()
+    let idade = hoje.getFullYear() - dataNascimento.getFullYear();
+    console.log(idade)
+    let dia = dataNascimento.getDay();
+    let mes = dataNascimento.getMonth();
     
-    let respostattoo = tattooSelecionada 
 
-    if (tattooSelecionada ){
-        respostatto = 'pode doar sangue'
+    if (idade >= 18 && doencaSelecionada == "nao" && peso >= 50 && tattooSelecionada == "nao" && medicineSelecionada == "nao" ){
+        resultado.innerHTML = 'Pode doar sangue'
     } else {
-        respostattoo = 'não pode doar sangue'
+        resultado.innerHTML = 'Não pode doar sangue'
     }
+    
 
      
-
-     resultado.innerHTML = `Você ${respostattoo} `
-
-    // console.log(`Nascimento ${nascimento} / Doença ${doencaSelecionada} / Peso ${peso} / Tattoo ${tattooSelecionada} / Medicamento ${medicineSelecionada}`)
 
 }

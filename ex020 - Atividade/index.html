@@ -8,6 +8,7 @@
 <body>
     <h1>Doação de Sangue!</h1>
 
+    <form action="" onsubmit="verificar(event)">
     <!-- Input da data de nascimento -->
     <p>
         <label for="nascimento">Qual a sua data de nascimento?</label>
@@ -32,25 +33,25 @@
     <!-- Entrada - Possui Tatuagem recente? -->
     <p>
         <label for="">Possui alguma tatuagem recente?</label>
-        <input type="radio" name="tattoo" id="inputYesTattoo" value="Sim">
+        <input type="radio" name="tattoo" id="inputYesTattoo" value="sim">
         <label for="inputYesTattoo">Sim</label>
-        <input type="radio" name="tattoo" id="inputNoTattoo" value="Não">
+        <input type="radio" name="tattoo" id="inputNoTattoo" value="nao">
         <label for="inputNoTattoo">Não</label>
     </p>
 
     <!-- Entrada - Toma algum medicamento? -->
     <p>
         <label for="">Está tomando algum medicamento?</label>
-        <input type="radio" name="medicine" id="inputYesMedicine" value="Sim">
+        <input type="radio" name="medicine" id="inputYesMedicine" value="sim">
         <label for="inputYesMedicine">Sim</label>
-        <input type="radio" name="medicine" id="inputNoMedicine" value="Não">
+        <input type="radio" name="medicine" id="inputNoMedicine" value="nao">
         <label for="inputNoMedicine">Não</label>
     </p>
 
-    <input type="button" value="Verificar" onclick="verificar()">
+    <input type="submit" value="Verificar">
 
     <p id="resultado"></p>
-
+</form>
 
     <script src="script.js"></script>
 
